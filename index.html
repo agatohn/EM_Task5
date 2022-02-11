@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="body">
+  <header class="header">
+    <img class='logo' src='./img/logo.png' alt="logo" width='50' height='50' />
+    <h1 class="title">Pokemon Finder</h1>
+    <form class="search-form" id="search-form">
+      <input type="text" name="query" autocomplete="off" placeholder="Type range of pokemons like `10-20` ..."
+        class="input" pattern="^[0-9]+(-[0-9]+)$" required />
+      <button type="submit" class="fetchBnt" form="search-form">Get Pokemons</button>
+    </form>
+    <!-- <button type="submit" class="fetchBnt" form="search-form">Get Pokemons</button> -->
+  </header>
+  <main>
+    <ul class="pokemon-gallery">
+    </ul>
+  </main>
+  <div class="backdrop is-hidden modal"></div>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
+<!-- pattern="/^[0-9]*[-]{1}[0-9]*$/" -->
+<!-- ^[A-ZА-Я]{1}[a-zа-я]+(-[A-ZА-Я]{1}[a-zа-я]+)*$ -->
